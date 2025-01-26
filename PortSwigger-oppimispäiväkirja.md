@@ -105,3 +105,12 @@ Opin tehtävästä, että komponenttien (ja muutenkin tekstin) kommentointia kan
 Tehtävässä ovattiin robots.txt url-osoitteen kautta. Tiedosto paljasti, että projektiin oli olemassa backup-tiedosto. Kun backup-tiedosto avattiin url-osoitteesta (../backup), voitiin havaita, että se sisälsi jonkinlaisen koodin jolla luotiin yhteys tietokantaan. Koodista löytyi myös tehtävän vaatima avain. 
 
 Opin tehtävästä, että ylipäätään kaikkien vanhojen ja lopulliseen tuotteeseen liittymättömien tiedostojen tulisi olla saavuttamattomissa käyttäjiltä, eikä niillä tulisi olla linkityksiä projektiin, ellei sitten esimerkiksi adminin tai vastaavan takana. On myös järkevää määrittää manuaalisesti robots.txt-tiedostoa vastaavat tiedostot. 
+
+# Tehtävät yhteensä:
+
+SQL injection: 2kpl
+Path traversal: 1kpl
+Authentication: 3kpl
+Information disclosure: 3kpl
+Access control: 9kpl
+Yhteensä: 18kpl
