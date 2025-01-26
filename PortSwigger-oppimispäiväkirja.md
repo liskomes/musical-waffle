@@ -113,4 +113,5 @@ Path traversal: 1kpl
 Authentication: 3kpl
 Information disclosure: 3kpl
 Access control: 9kpl
+
 Yhteensä: 18kpl
