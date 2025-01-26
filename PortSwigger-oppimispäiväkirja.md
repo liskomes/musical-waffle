@@ -1,4 +1,4 @@
-#1 SQL injection - SQL injection vulnerability in WHERE clause allowing retrieval of hidden data 
+# 1 SQL injection - SQL injection vulnerability in WHERE clause allowing retrieval of hidden data 
 
 Tehtävässä osa tuotteista oli piilotettu, ja yritin saada piilotetut tuotteet näkyviin. Asetin tehtävässä URL-osoitteen loppuosan Burp Suitessa “/filter?category=’+or+1=1--’”. SQL:ssä “--” on kommentin merkki. Kommentti mahdollisti osoitteen lopun jättämisen pois SQL-kyselystä. Se tarkoitti tehtävässä, että “..AND released = 1” jäivät pois SQL kyselystä, jolloin hakuehto SQL:ssä tuli vain alun mukaan, eli kysely palvelimella oli “SELECT * FROM product WHERE category = ‘’ OR 1=1--’ AND released = 1”. Koska 1=1 on aina totta ja valittuna on kaikki product-taulun tuotteet (*), palautetaan kaikki tuotteet.  
 
