@@ -6,7 +6,7 @@
 
 ## Lyödökset ja löydöksien kategoriointi
 
-$${\color{red}Red}$$
+$${\color{red}Salasanaa ei ole enkryptattu tietokantaan}$$
 <font color="red">Salasanaa ei ole enkryptattu tietokantaan</font>
 
 ## Liitteet
