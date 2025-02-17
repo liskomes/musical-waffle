@@ -42,12 +42,11 @@ Ongelma: Saman käyttäjänimen rekisteröinti kahdesti aiheuttaa palvelinvirhee
 
 Testi: Kun käyttäjänimeksi asettaa esimerkiksi "mauri", rekisteröityy ja rekisteröityy uudelleen samalla nimellä, palvelin palauttaa virheviestin "Error during registration" statuskoodilla 500.
 
+### Muut
 #### $\color{yellow}{\textsf{7. CSP Header not set}}$
 Ongelma: CSP-otsaketta ei ole asetettu. Tämä voi mahdollistaa esimerkiksi XSS-hyökkäykset, kun sisällön lähteitä ei rajata.
 
 Testi: Lähettäessä HTTP-pyyntö, otsaketta ei saada vastauksessa.
-
-### Muut
 #### $\color{yellow}{\textsf{8. Missing anti-clickjacking header}}$
 Ongelma: Vastaus ei suojaa Clickjacking-hyökkäyksiltä. Sen tulisi sisältää otsakkeet Content-Security-Policy ja frame-ancestors -direktiivi tai X-Frame-options.
 
@@ -69,3 +68,4 @@ Ongelma: User-Agent -arvojen vaihto ei vaikuta lopputulokseen. Jos ohjelmiston o
 Testi: Vaihtamalla user-agent -otsakkeen arvoa, mitään muutosta ei tapahdu.
 
 ## Liitteet
+[ZapProxy raportti] https://github.com/liskomes/musical-waffle/blob/main/The%20Booking%20system%20project%20phase%201/17-2-2025%20Zap%20Report.md
