@@ -37,8 +37,23 @@ Ongelma: Parametreja ei tarkisteta, joka voi aiheuttaa vakavia ongelmia palvelim
 Testi: Kun username-parametriksi asetetaan esimerkiksi "ZAP%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%0A", saadaan "internal server error"-virhe.
 
 ### $\color{yellow}{\textsf{3. Missing anti-clickjacking header}}$
-Ongelma: Parametreja ei tarkisteta, joka voi aiheuttaa vakavia ongelmia palvelimella. Palvelin käsittelee syötteet komentona.
+Ongelma: Vastaus ei suojaa Clickjacking-hyökkäyksiltä. Sen tulisi sisältää otsakkeet Content-Security-Policy ja frame-ancestors -direktiivi tai X-Frame-options.
 
-Testi: Kun username-parametriksi asetetaan esimerkiksi "ZAP%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%0A", saadaan "internal server error"-virhe.
+Testi: Lähettäessä HTTP-pyyntö, otsaketta ei saada vastauksessa.
+
+### $\color{green}{\textsf{3. Application error disclosure}}$
+Ongelma: Palvelin palauttaa virheviestin, joka voi sisältää sensitiivistä tietoa palvelimen toiminnasta. Statuskoodi 500 tarkoittaa palvelin virhettä (internal server error) ja sitä ei välttämättä haluta näyttää asiakkaille.
+
+Testi: Asettaessa rekisteröinnin yhteydessä rooliksi admin ja lähetettäessä lomake, saadaan virhe viesti ja koodi "Error during registration", 500.
+
+### $\color{green}{\textsf{3. X-Content-Type-Options Header Missing}}$
+Ongelma: X-Content-Type-Options -otsake puuttuu. Tämä voi altistaa MIME-sniffing -tarkistuksille. Selain siis saattaa yrittää automaattisesti arvata vastauksen sisällön tyypin, vaikka palvelin on määrittänyt sen, jolloin selain voi tulkita sisältöä väärin. Joissakin tapauksissa tämä voi aiheuttaa turvallisuusriskejä.
+
+Testi: Kun käyttäjä tekee HTTP-pyynnön, palvelimen vastauksessa ei ole määritelty X-Content-Options -otsaketta 'nosniff' -tilaan.
+
+### $\color{green}{\textsf{3. User Agent Fuzzer}}$
+Ongelma: User-Agent -arvojen vaihto ei vaikuta lopputulokseen. Jos ohjelmiston on tarkoitus toimia erilaisilla alustoilla ja sen takia saada erilaisessa muodossa vastauksia riippuen laitteistosta/sovelluksesta, voidaan joutua tekemään uusia ratkaisuja.
+
+Testi: Vaihtamalla user-agent -otsakkeen arvoa, mitään muutosta ei tapahdu.
 
 ## Liitteet
