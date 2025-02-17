@@ -15,3 +15,4 @@ Cybersecurity and data privacy - Spring 2025
 | 14.2.2025 | 2 | Lecture  | Learning about penetration testing. Learning about how to install virtual machines |
 | 15.2.2025 | 4 | The Booking system project part 1 | Learning about how hard the installation of kali+docker can be. Not much progress |
 | 15.2.2025 | 2 | The Booking system project part 1 | Installing penetration test environment and checking that everything works |
+| 16.2.2025 | 6 | The Booking system project part 1 | Running tests in ZapProxy and searhing errors manually |
