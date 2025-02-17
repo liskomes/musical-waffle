@@ -6,6 +6,6 @@
 
 ## Lyödökset ja löydöksien kategoriointi
 
-$$${\color{red}Kriittinen}$$ Salasanaa ei ole enkryptattu tietokantaan
+$\color{red}{\textsf{lorem ipsum}}$ Salasanaa ei ole enkryptattu tietokantaan
 
 ## Liitteet
