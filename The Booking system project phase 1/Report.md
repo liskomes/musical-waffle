@@ -26,4 +26,19 @@ Ongelma: SQL injektointi voi olla mahdollista, sillä syötettyjä parametrejä 
 
 Testi: Kun käyttäjänimeksi asettaa esimerkiksi "ssa' AND '1'='1' -- " ja rekisteröityy, tietokantaan tallennetaan käyttäjä tällä käyttäjänimellä. Käyttäjänimeä ei validoida.
 
+### $\color{yellow}{\textsf{3. CSP Header not set}}$
+Ongelma: CSP-otsaketta ei ole asetettu. Tämä voi mahdollistaa esimerkiksi XSS-hyökkäykset, kun sisällön lähteitä ei rajata.
+
+Testi: Lähettäessä HTTP-pyyntö, otsaketta ei saada vastauksessa.
+
+### $\color{yellow}{\textsf{3. Format string error}}$
+Ongelma: Parametreja ei tarkisteta, joka voi aiheuttaa vakavia ongelmia palvelimella. Palvelin käsittelee syötteet komentona.
+
+Testi: Kun username-parametriksi asetetaan esimerkiksi "ZAP%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%0A", saadaan "internal server error"-virhe.
+
+### $\color{yellow}{\textsf{3. Missing anti-clickjacking header}}$
+Ongelma: Parametreja ei tarkisteta, joka voi aiheuttaa vakavia ongelmia palvelimella. Palvelin käsittelee syötteet komentona.
+
+Testi: Kun username-parametriksi asetetaan esimerkiksi "ZAP%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%0A", saadaan "internal server error"-virhe.
+
 ## Liitteet
