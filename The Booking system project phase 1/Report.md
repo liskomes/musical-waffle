@@ -16,4 +16,14 @@ Ongelma: Rekisteröinnin yhteydessä tietokantaan voi tallentaa koodia, joka voi
 
 Testi: Kun käyttäjänimeksi asettaa esimerkiksi "<script>alert('XSS')</script>" ja rekisteröityy, tietokantaan tallennetaan käyttäjä tällä käyttäjänimellä. Käyttäjänimeä ei validoida.
 
+### $\color{red}{\textsf{3. Path traversal}}$
+Ongelma: Hyökkääjä voi manipuloida esimerkiksi username-tietoja niin, että se voi aiheuttaa odottamattomia tuloksia, kuten pääsyn muuhun järjestelmän sisältöön. Ei välttämättä ole tässä tapauksessa suuri riski, että näin voisi tapahtua.
+
+Testi: Kun käyttäjänimeksi asettaa esimerkiksi "../../../../../../../../../../../../../../../../" ja rekisteröityy, tietokantaan tallennetaan käyttäjä tällä käyttäjänimellä. Käyttäjänimeä ei validoida.
+
+### $\color{red}{\textsf{3. SQL injection}}$
+Ongelma: SQL injektointi voi olla mahdollista, sillä syötettyjä parametrejä ei valitoida. Tietokantaan voi näin ollen päästä mahdollisesti haitallisia arvoja, jotka voivat myöhemmin aiheuttaa odottamattomia ongelmia.
+
+Testi: Kun käyttäjänimeksi asettaa esimerkiksi "ssa' AND '1'='1' -- " ja rekisteröityy, tietokantaan tallennetaan käyttäjä tällä käyttäjänimellä. Käyttäjänimeä ei validoida.
+
 ## Liitteet
