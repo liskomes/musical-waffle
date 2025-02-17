@@ -6,7 +6,7 @@
 
 ## Lyödökset ja löydöksien kategoriointi
 
-### $\color{red}{\textsf{1. Salasanaa ei ole salattu tietokantaan}}$
+#### $\color{red}{\textsf{1. Salasanaa ei ole salattu tietokantaan}}$
 Ongelma: Salasanat on tallennettu tietokantaan ilman salausta. Tämä voi johtaa tietomurtoihin, käyttäjätilien kaappaukseen ja tietovuotoihin. Tämä rikkoo myös tietosuojakäytäntöjä kuten GDPR.
 
 Testi: Suorittamalla kyselyn SELECT * FROM xyz123_users; voidaan lukea salasanat suoraan
@@ -15,6 +15,11 @@ Testi: Suorittamalla kyselyn SELECT * FROM xyz123_users; voidaan lukea salasanat
 Ongelma: Rekisteröinnin yhteydessä tietokantaan voi tallentaa koodia, joka voi olla haitallista. Tämä voi aiheuttaa vakavia ongelmia sivustolla.
 
 Testi: Kun käyttäjänimeksi asettaa esimerkiksi "<script>alert('XSS')</script>" ja rekisteröityy, tietokantaan tallennetaan käyttäjä tällä käyttäjänimellä. Käyttäjänimeä ei validoida.
+
+### $\color{yellow}{\textsf{2. Saman käyttäjänimen rekisteröinti kahdesti aiheuttaa virheen}}$
+Ongelma: Saman käyttäjänimen rekisteröinti kahdesti aiheuttaa palvelinvirheen, mikä indikoi siitä että palvelin ei tarkista onko käyttäjä jo olemassa. Palvelinvirhe ei välttämättä ole haluttu virhe, sillä se saattaa paljastaa palvelimen vikoja. Statuskoodi voisi olla joko 409 tai muu riippuen halutusta lopputuloksesta. 
+
+Testi: Kun käyttäjänimeksi asettaa esimerkiksi "mauri", rekisteröityy ja rekisteröityy uudelleen samalla nimellä, palvelin palauttaa virheviestin "Error during registration" statuskoodilla 500.
 
 ### $\color{red}{\textsf{3. Path traversal}}$
 Ongelma: Hyökkääjä voi manipuloida esimerkiksi username-tietoja niin, että se voi aiheuttaa odottamattomia tuloksia, kuten pääsyn muuhun järjestelmän sisältöön. Ei välttämättä ole tässä tapauksessa suuri riski, että näin voisi tapahtua.
