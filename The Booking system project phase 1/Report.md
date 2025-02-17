@@ -6,7 +6,7 @@
 
 ## Lyödökset ja löydöksien kategoriointi
 
-<p style='color:red'>This is some red text.</p>
+<code style="color : red">text</code>
 Salasanaa ei ole enkryptattu tietokantaan
 
 ## Liitteet
