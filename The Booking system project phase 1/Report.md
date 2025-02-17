@@ -1,1 +1,9 @@
-# Penetration test report
+# Penetraatiotestausraportti
+
+## Johdanto
+
+## Yhteenveto
+
+## Lyödökset ja löydöksien kategoriointi
+
+## Liitteet
