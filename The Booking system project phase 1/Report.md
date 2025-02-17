@@ -1,8 +1,11 @@
 # Penetraatiotestausraportti
 
 ## Johdanto
+Raportin tarkoituksena oli löytää haavoittuvuuksia The Booking system project -palvelimesta. Haavoittuvuuksia arvioitiin manuaalisilla testeillä sekä ZapProxy-työkalulla, jonka avulla luotu raportti löytyy liitteistä. Testausympäristönä toimii Virtual box, johon on asennettu Kali-käyttöjärjestelmä sekä Docker. Hyökkäykset toteutettiin ZapProxy-työkalulla sekä manuaalisilla toimilla ja lisäksi kokonaisuutta arvioitiin silmämääräisesti. Testaus rajattiin /register-päätepisteeseen ja aikataulu rajattiin 15.2.2025-17.2.2025 välille. 
 
 ## Yhteenveto
+
+Merkittävimmät kolme löydöstä olivat salasanan salaamattomuus tietokannassa, syötteen validoimattomuus ja palvelinvirheiden vuotaminen asiakkaalle. Koska salasanoja ei salata, se altistaa ohjelmiston käyttäjätietojen väärinkäytölle. On erittäin suositeltavaa lisätä salausalgoritmit käsittelemään salasanoja. Koska syötteitä ei validoida, voi asiakkaalla tai palvelimella ilmetä odottamattomia ongelmia tai jopa tietovuotoja. Kehitystyössä tulisi kehittää näitä varten omat validointikäytännöt suojaamaan esimerkiksi XSS- tai SQL-injektiohyökkäyksiltä ja tietokantaan ei tulisi tallentaa epämääräisiä tietoja. Palvelinvirheitä varten tulisi kehittää poikkeamien hallintamekanismi, joka ei paljasta palvelinvirheitä asiakkaalle.
 
 ## Lyödökset ja löydöksien kategorisointi
 
@@ -18,12 +21,12 @@ Ongelma: Rekisteröinnin yhteydessä tietokantaan voi tallentaa koodia, joka voi
 
 Testi: Kun käyttäjänimeksi asettaa esimerkiksi "<script>alert('XSS')</script>" ja rekisteröityy, tietokantaan tallennetaan käyttäjä tällä käyttäjänimellä. Käyttäjänimeä ei validoida.
 
-#### $\color{red}{\textsf{4. Path traversal}}$
+#### $\color{red}{\textsf{3. Path traversal}}$
 Ongelma: Hyökkääjä voi manipuloida esimerkiksi username-tietoja niin, että se voi aiheuttaa odottamattomia tuloksia, kuten pääsyn muuhun järjestelmän sisältöön. Ei välttämättä ole tässä tapauksessa suuri riski, että näin voisi tapahtua.
 
 Testi: Kun käyttäjänimeksi asettaa esimerkiksi "../../../../../../../../../../../../../../../../" ja rekisteröityy, tietokantaan tallennetaan käyttäjä tällä käyttäjänimellä. Käyttäjänimeä ei validoida.
 
-#### $\color{yellow}{\textsf{7. Format string error}}$
+#### $\color{yellow}{\textsf{4. Format string error}}$
 Ongelma: Parametreja ei tarkisteta, joka voi aiheuttaa vakavia ongelmia palvelimella. Palvelin käsittelee syötteet komentona.
 
 Testi: Kun username-parametriksi asetetaan esimerkiksi "ZAP%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%25n%25s%0A", saadaan "internal server error"-virhe.
@@ -34,12 +37,12 @@ Ongelma: SQL injektointi voi olla mahdollista, sillä syötettyjä parametrejä 
 Testi: Kun käyttäjänimeksi asettaa esimerkiksi "ssa' AND '1'='1' -- " ja rekisteröityy, tietokantaan tallennetaan käyttäjä tällä käyttäjänimellä. Käyttäjänimeä ei validoida.
 
 ### Virheenkäsittely ja lokitus
-#### $\color{yellow}{\textsf{3. Saman käyttäjänimen rekisteröinti kahdesti aiheuttaa virheen}}$
+#### $\color{yellow}{\textsf{6. Saman käyttäjänimen rekisteröinti kahdesti aiheuttaa virheen}}$
 Ongelma: Saman käyttäjänimen rekisteröinti kahdesti aiheuttaa palvelinvirheen, mikä indikoi siitä että palvelin ei tarkista onko käyttäjä jo olemassa. Palvelinvirhe ei välttämättä ole haluttu virhe, sillä se saattaa paljastaa palvelimen vikoja. Statuskoodi voisi olla joko 409 tai muu riippuen halutusta lopputuloksesta. 
 
 Testi: Kun käyttäjänimeksi asettaa esimerkiksi "mauri", rekisteröityy ja rekisteröityy uudelleen samalla nimellä, palvelin palauttaa virheviestin "Error during registration" statuskoodilla 500.
 
-#### $\color{yellow}{\textsf{6. CSP Header not set}}$
+#### $\color{yellow}{\textsf{7. CSP Header not set}}$
 Ongelma: CSP-otsaketta ei ole asetettu. Tämä voi mahdollistaa esimerkiksi XSS-hyökkäykset, kun sisällön lähteitä ei rajata.
 
 Testi: Lähettäessä HTTP-pyyntö, otsaketta ei saada vastauksessa.
