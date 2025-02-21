@@ -5,10 +5,10 @@ Raportin tarkoituksena oli löytää haavoittuvuuksia The Booking system project
 
 ## Yhteenveto
 
+21.2.2025
+
 17.2.2025
 ~~Merkittävimmät kolme löydöstä olivat salasanan salaamattomuus tietokannassa, syötteen validoimattomuus ja palvelinvirheiden vuotaminen asiakkaalle. Koska salasanoja ei salata, se altistaa ohjelmiston käyttäjätietojen väärinkäytölle. On erittäin suositeltavaa lisätä salausalgoritmit käsittelemään salasanoja. Koska syötteitä ei validoida, voi asiakkaalla tai palvelimella ilmetä odottamattomia ongelmia tai jopa tietovuotoja. Kehitystyössä tulisi kehittää näitä varten omat validointikäytännöt suojaamaan esimerkiksi XSS- tai SQL-injektiohyökkäyksiltä ja tietokantaan ei tulisi tallentaa epämääräisiä tietoja. Palvelinvirheitä varten tulisi kehittää poikkeamien hallintamekanismi, joka ei paljasta palvelinvirheitä asiakkaalle.~~~
-
-21.2.2025
 
 ## Lyödökset ja löydöksien kategorisointi
 Löydökset on kategorisoitu tyypin mukaan ja värikoodattu seuraavalla tavalla:
