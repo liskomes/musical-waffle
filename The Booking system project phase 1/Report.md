@@ -13,7 +13,7 @@ Raportin tarkoituksena oli löytää haavoittuvuuksia The Booking system project
 ## Lyödökset ja löydöksien kategorisointi
 Löydökset on kategorisoitu tyypin mukaan ja värikoodattu seuraavalla tavalla:
 
-$\color{cyan}{\textsf{Punainen (kriittinen):}}$ Poikkeamat ja haavoittuvuudet, jotka voivat johtaa merkittäviin tietoturvaloukkauksiin tai järjestelmän kompromettoitumiseen.
+$\color{red}{\textsf{Punainen (kriittinen):}}$ Poikkeamat ja haavoittuvuudet, jotka voivat johtaa merkittäviin tietoturvaloukkauksiin tai järjestelmän kompromettoitumiseen.
 
 $\color{yellow}{\textsf{Keltainen (keskitaso):}}$ Haavoittuvuudet, jotka voivat aiheuttaa vakavia tietoturvaongelmia, mutta vaativat tiettyjä olosuhteita.
 
