@@ -1,11 +1,14 @@
 # Penetraatiotestausraportti
 
 ## Johdanto
-Raportin tarkoituksena oli löytää haavoittuvuuksia The Booking system project -palvelimesta. Haavoittuvuuksia arvioitiin manuaalisilla testeillä sekä ZapProxy-työkalulla, jonka avulla luotu raportti löytyy liitteistä. Testausympäristönä toimii Virtual box, johon on asennettu Kali-käyttöjärjestelmä sekä Docker. Hyökkäykset toteutettiin ZapProxy-työkalulla sekä manuaalisilla toimilla ja lisäksi kokonaisuutta arvioitiin silmämääräisesti. Testaus rajattiin /register-päätepisteeseen ja aikataulu rajattiin 15.2.2025-17.2.2025 välille. 
+Raportin tarkoituksena oli löytää haavoittuvuuksia The Booking system project -palvelimesta. Haavoittuvuuksia arvioitiin manuaalisilla testeillä sekä ZapProxy-työkalulla, jonka avulla luotu raportti löytyy liitteistä. Testausympäristönä toimii Virtual box, johon on asennettu Kali-käyttöjärjestelmä sekä Docker. Hyökkäykset toteutettiin ZapProxy-työkalulla sekä manuaalisilla toimilla ja lisäksi kokonaisuutta arvioitiin silmämääräisesti. Testaus rajattiin /register-päätepisteeseen ja aikataulu rajattiin 15.2.2025-21.2.2025 välille. 
 
 ## Yhteenveto
 
-Merkittävimmät kolme löydöstä olivat salasanan salaamattomuus tietokannassa, syötteen validoimattomuus ja palvelinvirheiden vuotaminen asiakkaalle. Koska salasanoja ei salata, se altistaa ohjelmiston käyttäjätietojen väärinkäytölle. On erittäin suositeltavaa lisätä salausalgoritmit käsittelemään salasanoja. Koska syötteitä ei validoida, voi asiakkaalla tai palvelimella ilmetä odottamattomia ongelmia tai jopa tietovuotoja. Kehitystyössä tulisi kehittää näitä varten omat validointikäytännöt suojaamaan esimerkiksi XSS- tai SQL-injektiohyökkäyksiltä ja tietokantaan ei tulisi tallentaa epämääräisiä tietoja. Palvelinvirheitä varten tulisi kehittää poikkeamien hallintamekanismi, joka ei paljasta palvelinvirheitä asiakkaalle.
+17.2.2025
+~~Merkittävimmät kolme löydöstä olivat salasanan salaamattomuus tietokannassa, syötteen validoimattomuus ja palvelinvirheiden vuotaminen asiakkaalle. Koska salasanoja ei salata, se altistaa ohjelmiston käyttäjätietojen väärinkäytölle. On erittäin suositeltavaa lisätä salausalgoritmit käsittelemään salasanoja. Koska syötteitä ei validoida, voi asiakkaalla tai palvelimella ilmetä odottamattomia ongelmia tai jopa tietovuotoja. Kehitystyössä tulisi kehittää näitä varten omat validointikäytännöt suojaamaan esimerkiksi XSS- tai SQL-injektiohyökkäyksiltä ja tietokantaan ei tulisi tallentaa epämääräisiä tietoja. Palvelinvirheitä varten tulisi kehittää poikkeamien hallintamekanismi, joka ei paljasta palvelinvirheitä asiakkaalle.~~~
+
+21.2.2025
 
 ## Lyödökset ja löydöksien kategorisointi
 Löydökset on kategorisoitu tyypin mukaan ja värikoodattu seuraavalla tavalla:
@@ -13,11 +16,11 @@ Punainen (kriittinen): Poikkeamat ja haavoittuvuudet, jotka voivat johtaa merkit
 Keltainen (keskitaso): Haavoittuvuudet, jotka voivat aiheuttaa vakavia tietoturvaongelmia, mutta vaativat tiettyjä olosuhteita.
 Vihreä (matala): Haavoittuvuudet, jotka aiheuttavat vähäisiä tietoturvaongelmia tai vaativat täsmällisiä olosuhteita.
 
-### Tietojen salaus
+~~### Tietojen salaus (korjattu 21.2.2025)
 #### $\color{red}{\textsf{1. Salasanaa ei ole salattu tietokantaan (kriittinen)}}$
 Ongelma: Salasanat on tallennettu tietokantaan ilman salausta. Tämä voi johtaa tietomurtoihin, käyttäjätilien kaappaukseen ja tietovuotoihin. Tämä rikkoo myös tietosuojakäytäntöjä kuten GDPR.
 
-Testi: Suorittamalla kyselyn SELECT * FROM xyz123_users; voidaan lukea salasanat suoraan
+Testi: Suorittamalla kyselyn SELECT * FROM xyz123_users; voidaan lukea salasanat suoraan~~
 
 ### Syötteen validointi
 #### $\color{red}{\textsf{2. Tietokantaan voi lisätä koodia (kriittinen)}}$
