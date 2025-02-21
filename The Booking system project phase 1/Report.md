@@ -6,7 +6,7 @@ Raportin tarkoituksena oli löytää haavoittuvuuksia The Booking system project
 ## Yhteenveto
 
 21.2.2025
-
+Kriittisiä virheitä ei löytynyt. Kuitenkin kuka tapahsa onnistui rekisteröitymään adminina, mikä aiheuttaa tietoturvakysymyksiä. Admin-rekisteröityminen ei välttämättä ole haluttu toiminnallisuus asiakkaalla, ja sen voisi poistaa. Sähköpostin validointia voisi parantaa tarkastamalla specifimmin osoitteen. Asiakkaan user-agent arvolla ei ole merkitystä palvelimelle. Tarviiko olla edes?
 
 17.2.2025
 ~~Merkittävimmät kolme löydöstä olivat salasanan salaamattomuus tietokannassa, syötteen validoimattomuus ja palvelinvirheiden vuotaminen asiakkaalle. Koska salasanoja ei salata, se altistaa ohjelmiston käyttäjätietojen väärinkäytölle. On erittäin suositeltavaa lisätä salausalgoritmit käsittelemään salasanoja. Koska syötteitä ei validoida, voi asiakkaalla tai palvelimella ilmetä odottamattomia ongelmia tai jopa tietovuotoja. Kehitystyössä tulisi kehittää näitä varten omat validointikäytännöt suojaamaan esimerkiksi XSS- tai SQL-injektiohyökkäyksiltä ja tietokantaan ei tulisi tallentaa epämääräisiä tietoja. Palvelinvirheitä varten tulisi kehittää poikkeamien hallintamekanismi, joka ei paljasta palvelinvirheitä asiakkaalle.~~
@@ -25,6 +25,12 @@ $\color{green}{\textsf{Vihreä (matala):}}$ Haavoittuvuudet, jotka aiheuttavat v
 Ongelma: Sähköpostiosoite voi loppua epämääräisiin merkkeisiin.
 
 Testi: Asettamalla sähköposti esimerkiksi "oar@gmail.com212112' ja rekisteröitymällä muutoin normaalisti, sähköpostiosoite hyväksytään ja tallennetaan tietokantaan
+
+### Käyttäjätietojen validointi
+#### $\color{yellow}{\textsf{11. Kuka tahansa voi rekisteröityä adminina (matala) }}$
+Ongelma: Kuka tahansa voi rekisteröityä adminina. 
+
+Testi: Rekisteröityessä käyttäjä voi valita rooliksi adminin. Kun hän näin tekee rekisteröinti onnistuu normaalisti.
 
 ### Muut
 #### $\color{green}{\textsf{11. User Agent Fuzzer (matala) }}$
