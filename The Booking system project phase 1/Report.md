@@ -73,4 +73,5 @@ Testi: Vaihtamalla user-agent -otsakkeen arvoa, mitään muutosta ei tapahdu.
 
 ## Liitteet
 [ZapProxy raportti - 17-2-2025 Zap Report.md] https://github.com/liskomes/musical-waffle/blob/main/The%20Booking%20system%20project%20phase%201/17-2-2025%20Zap%20Report.md
+
 [ZapProxy raportti - 21-2-2025 Zap Report.md] https://github.com/liskomes/musical-waffle/blob/main/The%20Booking%20system%20project%20phase%201/21-2-2025%20Zap%20Report.md
