@@ -27,7 +27,7 @@ Ongelma: Sähköpostiosoite voi loppua epämääräisiin merkkeisiin.
 Testi: Asettamalla sähköposti esimerkiksi "oar@gmail.com212112' ja rekisteröitymällä muutoin normaalisti, sähköpostiosoite hyväksytään ja tallennetaan tietokantaan
 
 ### Käyttäjätietojen validointi
-#### $\color{yellow}{\textsf{11. Kuka tahansa voi rekisteröityä adminina (matala) }}$
+#### $\color{yellow}{\textsf{11. Kuka tahansa voi rekisteröityä adminina (keskitaso) }}$
 Ongelma: Kuka tahansa voi rekisteröityä adminina. 
 
 Testi: Rekisteröityessä käyttäjä voi valita rooliksi adminin. Kun hän näin tekee rekisteröinti onnistuu normaalisti.
