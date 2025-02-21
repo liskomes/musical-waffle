@@ -15,12 +15,13 @@ Löydökset on kategorisoitu tyypin mukaan ja värikoodattu seuraavalla tavalla:
 Punainen (kriittinen): Poikkeamat ja haavoittuvuudet, jotka voivat johtaa merkittäviin tietoturvaloukkauksiin tai järjestelmän kompromettoitumiseen.
 Keltainen (keskitaso): Haavoittuvuudet, jotka voivat aiheuttaa vakavia tietoturvaongelmia, mutta vaativat tiettyjä olosuhteita.
 Vihreä (matala): Haavoittuvuudet, jotka aiheuttavat vähäisiä tietoturvaongelmia tai vaativat täsmällisiä olosuhteita.
+Syaani (korjattu): Korjatut haavoittuvuudet.
 
-~~### Tietojen salaus (korjattu 21.2.2025)
-#### $\color{red}{\textsf{1. Salasanaa ei ole salattu tietokantaan (kriittinen)}}$
+### Tietojen salaus 
+#### $\color{cyan}{\textsf{1. Salasanaa ei ole salattu tietokantaan (kriittinen) (korjattu 21.2.2025)}}$
 Ongelma: Salasanat on tallennettu tietokantaan ilman salausta. Tämä voi johtaa tietomurtoihin, käyttäjätilien kaappaukseen ja tietovuotoihin. Tämä rikkoo myös tietosuojakäytäntöjä kuten GDPR.
 
-Testi: Suorittamalla kyselyn SELECT * FROM xyz123_users; voidaan lukea salasanat suoraan~~
+Testi: Suorittamalla kyselyn SELECT * FROM xyz123_users; voidaan lukea salasanat suoraan
 
 ### Syötteen validointi
 #### $\color{red}{\textsf{2. Tietokantaan voi lisätä koodia (kriittinen)}}$
