@@ -7,6 +7,7 @@ Raportin tarkoituksena oli löytää haavoittuvuuksia The Booking system project
 
 21.2.2025
 
+
 17.2.2025
 ~~Merkittävimmät kolme löydöstä olivat salasanan salaamattomuus tietokannassa, syötteen validoimattomuus ja palvelinvirheiden vuotaminen asiakkaalle. Koska salasanoja ei salata, se altistaa ohjelmiston käyttäjätietojen väärinkäytölle. On erittäin suositeltavaa lisätä salausalgoritmit käsittelemään salasanoja. Koska syötteitä ei validoida, voi asiakkaalla tai palvelimella ilmetä odottamattomia ongelmia tai jopa tietovuotoja. Kehitystyössä tulisi kehittää näitä varten omat validointikäytännöt suojaamaan esimerkiksi XSS- tai SQL-injektiohyökkäyksiltä ja tietokantaan ei tulisi tallentaa epämääräisiä tietoja. Palvelinvirheitä varten tulisi kehittää poikkeamien hallintamekanismi, joka ei paljasta palvelinvirheitä asiakkaalle.~~~
 
@@ -18,6 +19,11 @@ $\color{red}{\textsf{Punainen (kriittinen):}}$ Poikkeamat ja haavoittuvuudet, jo
 $\color{yellow}{\textsf{Keltainen (keskitaso):}}$ Haavoittuvuudet, jotka voivat aiheuttaa vakavia tietoturvaongelmia, mutta vaativat tiettyjä olosuhteita.
 
 $\color{green}{\textsf{Vihreä (matala):}}$ Haavoittuvuudet, jotka aiheuttavat vähäisiä tietoturvaongelmia tai vaativat täsmällisiä olosuhteita.
+
+#### $\color{green}{\textsf{11. User Agent Fuzzer (matala) }}$
+Ongelma: User-Agent -arvojen vaihto ei vaikuta lopputulokseen. Jos ohjelmiston on tarkoitus toimia erilaisilla alustoilla ja sen takia saada erilaisessa muodossa vastauksia riippuen laitteistosta/sovelluksesta, voidaan joutua tekemään uusia ratkaisuja.
+
+Testi: Vaihtamalla user-agent -otsakkeen arvoa, mitään muutosta ei tapahdu.
 
 ## Korjatut lyödökset ja löydöksien kategorisointi
 Löydökset on kategorisoitu tyypin mukaan ja värikoodattu seuraavalla tavalla:
@@ -31,7 +37,7 @@ Ongelma: Salasanat on tallennettu tietokantaan ilman salausta. Tämä voi johtaa
 Testi: Suorittamalla kyselyn SELECT * FROM xyz123_users; voidaan lukea salasanat suoraan
 
 ### Syötteen validointi
-#### $\color{red}{\textsf{2. Tietokantaan voi lisätä koodia (kriittinen) (korjattu 21.2.2025)}}$
+#### $\color{cyan}{\textsf{2. Tietokantaan voi lisätä koodia (kriittinen) (korjattu 21.2.2025)}}$
 Ongelma: Rekisteröinnin yhteydessä tietokantaan voi tallentaa koodia, joka voi olla haitallista. Tämä voi aiheuttaa vakavia ongelmia sivustolla.
 
 Testi: Kun käyttäjänimeksi asettaa esimerkiksi "<script>alert('XSS')</script>" ja rekisteröityy, tietokantaan tallennetaan käyttäjä tällä käyttäjänimellä. Käyttäjänimeä ei validoida.
@@ -76,11 +82,6 @@ Testi: Asettaessa rekisteröinnin yhteydessä rooliksi admin ja lähetettäessä
 Ongelma: X-Content-Type-Options -otsake puuttuu. Tämä voi altistaa MIME-sniffing -tarkistuksille. Selain siis saattaa yrittää automaattisesti arvata vastauksen sisällön tyypin, vaikka palvelin on määrittänyt sen, jolloin selain voi tulkita sisältöä väärin. Joissakin tapauksissa tämä voi aiheuttaa turvallisuusriskejä.
 
 Testi: Kun käyttäjä tekee HTTP-pyynnön, palvelimen vastauksessa ei ole määritelty X-Content-Options -otsaketta 'nosniff' -tilaan.
-
-#### $\color{green}{\textsf{11. User Agent Fuzzer (matala) }}$
-Ongelma: User-Agent -arvojen vaihto ei vaikuta lopputulokseen. Jos ohjelmiston on tarkoitus toimia erilaisilla alustoilla ja sen takia saada erilaisessa muodossa vastauksia riippuen laitteistosta/sovelluksesta, voidaan joutua tekemään uusia ratkaisuja.
-
-Testi: Vaihtamalla user-agent -otsakkeen arvoa, mitään muutosta ei tapahdu.
 
 ## Liitteet
 [ZapProxy raportti - 17-2-2025 Zap Report.md] https://github.com/liskomes/musical-waffle/blob/main/The%20Booking%20system%20project%20phase%201/17-2-2025%20Zap%20Report.md
