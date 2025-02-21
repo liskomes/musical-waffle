@@ -20,6 +20,13 @@ $\color{yellow}{\textsf{Keltainen (keskitaso):}}$ Haavoittuvuudet, jotka voivat 
 
 $\color{green}{\textsf{Vihreä (matala):}}$ Haavoittuvuudet, jotka aiheuttavat vähäisiä tietoturvaongelmia tai vaativat täsmällisiä olosuhteita.
 
+### Syötteen validointi
+#### $\color{green}{\textsf{11. Sähköpostiosoitteen validointi on heikko (matala) }}$
+Ongelma: Sähköpostiosoite voi loppua epämääräisiin merkkeisiin.
+
+Testi: Asettamalla sähköposti esimerkiksi "oar@gmail.com212112' ja rekisteröitymällä muutoin normaalisti, sähköpostiosoite hyväksytään ja tallennetaan tietokantaan
+
+### Muut
 #### $\color{green}{\textsf{11. User Agent Fuzzer (matala) }}$
 Ongelma: User-Agent -arvojen vaihto ei vaikuta lopputulokseen. Jos ohjelmiston on tarkoitus toimia erilaisilla alustoilla ja sen takia saada erilaisessa muodossa vastauksia riippuen laitteistosta/sovelluksesta, voidaan joutua tekemään uusia ratkaisuja.
 
