@@ -17,4 +17,4 @@ Cybersecurity and data privacy - Spring 2025
 | 15.2.2025 | 2 | The Booking system project part 1 | Installing penetration test environment and checking that everything works |
 | 16.2.2025 | 6 | The Booking system project part 1 | Running tests in ZapProxy and searhing errors manually |
 | 21.2.2025 | 3 | The Booking system project part 1 version 2 | Workshop, version 2 penetration testing |
-| 6.3.2025 | 1 | Lecture | Authentication and authorization |
+| 6.3.2025 | 2 | Lecture | Authentication and authorization |
