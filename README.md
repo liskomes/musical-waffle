@@ -20,3 +20,4 @@ Cybersecurity and data privacy - Spring 2025
 | 6.3.2025 | 2 | Lecture | Authentication and authorization. Password attacks, password encryption and decryption |
 | 7.3.2025 | 3 | The Booking system project part 2 | Hashcat commands, hacking passwords | 
 | 15.3.2025 | 4 | The Booking system project part 2 | Dictionary and non-dictionary attacks with hydra and burp suite | 
+| 20.3.2025 | 2 | Lecture | Lecture recording | 
