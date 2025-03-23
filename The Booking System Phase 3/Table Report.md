@@ -1,7 +1,7 @@
 | Page / Feature	| Guest |	Reserver | Administrator |
 | :---         |     :---:      |     :---:      |     :---:      |
-| / (index)	| | | |		
-| └─ View resource form	| ❌	| ✅	| ✅ |
+| /	| | | |		
+| └─ View booked resources	| ❌	| ✅	| ✅ |
 | └─ Can see "Add a new resource" button | ❌	| ✅	| ✅ |
 | └─ Can see "Add a new reservation" button | ❌	| ✅	| ✅ |
 | /resources	| | | |	
