@@ -45,6 +45,7 @@ Reservation pages between 1-1000 found: 1-63 found (some numbers missing between
 The api page contains JSON data
 
 ZAP report:
+My PC couldn't handle the ZAP process well (It couldn't execute multiple test rounds). Virtual Box crashed multiple times so there is only the raport of one test round. 
 [Zap report](https://github.com/liskomes/musical-waffle/blob/main/The%20Booking%20System%20Phase%203/Zap%20report.md)
 
 Results:
