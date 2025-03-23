@@ -45,11 +45,19 @@ Reservation pages between 1-1000 found: 1-63 found (some numbers missing between
 The api page contains JSON data
 
 Results:
+
 ✅ 1. The system is accessed via a web browser.
+
 ✅ 2. Users can register and, after registration, log in to the system.
+
 ✅ 3. A registered and logged-in user acts as either a resource reserver or an administrator.
+
 ⚠️ 4. The administrator can add, remove, and modify resources and reservations. ⚠️Reservers can also add/modify resources
+
 ⚠️ 5. The administrator can delete the reserver. ⚠️Administrator and user can change the reserver
+
 ✅ 6. A reserver can book a resource if they are over 15 years old.
+
 ✅ 7. Resources can be booked on an hourly basis.
+
 ✅ 8. The booking system displays booked resources without requiring login, but does not show the reserver's identity
