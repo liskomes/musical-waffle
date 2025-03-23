@@ -16,6 +16,8 @@
 | └─ Create a new reservation	| ❌ | ✅ | ✅ |
 | /admin ⚠️(Note 5*)| | | |
 | /profile ⚠️(Note 5*)| | | |		
+| /login | | | |
+| └─ Can login	| ❌ | ✅ | ✅ |
 
 Symbols used:
 ✅ Pass
@@ -30,24 +32,7 @@ Notes:
 5. Not implemented
 
 WFUZZ:
-
-Sites found:
-=====================================================================
-ID           Response   Lines    Word       Chars       Payload                                                              
-=====================================================================
-
-000000001:   200        375 L    1166 W     17989 Ch    "http://localhost:8000/"                                                              
-000002362:   302        0 L      0 W        0 Ch        "logout"                                                                              
-000002347:   200        32 L     137 W      1967 Ch     "login"                                                                               
-000003341:   200        44 L     202 W      2978 Ch     "register"                                                                            
-000003404:   200        38 L     157 W      2235 Ch     "resources"                                                                           
-000003395:   401        0 L      1 W        12 Ch       "reservation"   
-
-Api foulders found:
-=====================================================================
-ID           Response   Lines    Word       Chars       Payload                                                              
-=====================================================================
-
-000003404:   200        0 L      1031 W     49961 Ch    "resources"                                                                           
-000003601:   401        0 L      1 W        12 Ch       "session"                                                                             
-000004245:   200        0 L      1 W        612 Ch      "users"  
+Sites found: logout, login, register, resources, reservation
+Api folders found: resources, session, users
+Reservation pages between 1-1000 found: 1-63 found (some numbers missing between them)
+The api page contains JSON data
