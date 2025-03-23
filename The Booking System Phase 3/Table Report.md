@@ -44,6 +44,9 @@ Api folders found: resources, session, users
 Reservation pages between 1-1000 found: 1-63 found (some numbers missing between them)
 The api page contains JSON data
 
+ZAP report:
+[Zap report](https://github.com/liskomes/musical-waffle/blob/main/The%20Booking%20System%20Phase%203/Zap%20report.md)
+
 Results:
 
 ✅ 1. The system is accessed via a web browser.
