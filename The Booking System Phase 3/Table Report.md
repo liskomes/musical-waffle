@@ -10,8 +10,8 @@
 | └─ Create a new reservation	| ❌ | ✅ | ✅ |
 
 Symbols used:
-✅ Pass (a note can be added)
-❌ Fail (a note can be added)
-⚠️ Attention (a note can be added)
+✅ Pass
+❌ Fail
+⚠️ Attention
 
 Notes:
