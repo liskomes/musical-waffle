@@ -1,7 +1,10 @@
 | Page / Feature	| Guest |	Reserver | Administrator |
 | :---         |     :---:      |     :---:      |     :---:      |
 | / (index)	| | | |		
-| └─ View resource form	| ❌	| ✅	| ✅ note added |
+| └─ View resource form	| ❌	| ✅	| ✅ |
+| └─ Can see "Add a new resource" button | ❌	| ✅	| ✅ |
+| └─ Can see "Add a new reservation" button | ❌	| ✅	| ✅ |
+| /resources	| | | |	
 | └─ Create a new resource	| ❌	| ✅	| ✅ |
 | /reservation	| | | |		
 | └─ Change a reserver from own booked resources	| ❌	| ⚠️(Note 1*)	| ✅ |
@@ -18,5 +21,5 @@ Symbols used:
 ⚠️ Attention
 
 Notes:
-1. It's not good that reserver user can change the reserver to whoever he/she wants
+1. It's not good that a reserver user can change the reserver to whoever he/she wants
 2. Changing the reservation end time to smaller than start time throws an error
