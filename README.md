@@ -22,3 +22,6 @@ Cybersecurity and data privacy - Spring 2025
 | 15.3.2025 | 4 | The Booking system project part 2 | Dictionary and non-dictionary attacks with hydra and burp suite | 
 | 20.3.2025 | 2 | Lecture | Lecture recording | 
 | 23.3.2025 | 3 | The Booking system project part 3 | Testing new sites. ZAP, wfuzz and manually | 
+| 2.4.2025 | 2 | GDPR | Learning about GRPR | 
+
+Total hours: 53
