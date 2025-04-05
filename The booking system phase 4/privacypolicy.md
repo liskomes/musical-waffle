@@ -27,7 +27,7 @@ Henkilötietoja ei luovuteta kolmansille osapuolille, paitsi viranomaisille **la
 
 ## 4. Tietojen säilytys
 
-Käyttäjien henkilötietoja säilytetään tietokannassa niin kauan, kunnes:
+Käyttäjien henkilötietoja säilytetään tietokannassa niin kauan, kun se on tarpeen tai:
 
 - Käyttäjä itse poistaa tilinsä, tai
 - Sovelluksen ylläpito poistaa käyttäjän.
@@ -40,7 +40,8 @@ Käyttäjällä on oikeus:
 
 - Tarkastaa itseään koskevat henkilötiedot
 - Pyytää tietojensa oikaisua tai päivittämistä
-- Poistaa kaikki omat henkilötietonsa sovelluksesta
+- Poistaa kaikki omat henkilötietonsa sovelluksesta (“oikeus tulla unohdetuksi”)
+- **Oikeus vastustaa käsittelyä**, mikäli käsittely perustuu oikeutettuun etuun
 
 Tietojen tarkastusta tai poistamista koskevat pyynnöt voi osoittaa sovelluksen ylläpidolle sähköpostitse.
 
