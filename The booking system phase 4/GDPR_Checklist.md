@@ -78,11 +78,19 @@
 ⚠️ Attention (a note can be added)
 
 Note 1: Users under age 15 cannot register
+
 Note 2: The terms of service is included to the form, but its there is no actual privacy policy yet
+
 Note 3: Users can only view their profile via account
+
 Note 4: Roles work in exact same way. The code doesn't make difference between roles
+
 Note 5: +Note4. Administrator has no special rights implemented
+
 Note 6: Logs are not implemented
+
 Note 7: Its possible to inject SQL syntax to database
+
 Note 8: Data is located to personal pc in the development phase
+
 Note 9: There is a easily accessible privacy policy, but privacy policy contains nothing
