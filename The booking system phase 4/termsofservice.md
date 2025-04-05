@@ -48,4 +48,4 @@ Ylläpito pidättää oikeuden muuttaa näitä käyttöehtoja. Merkittävistä m
 
 ---
 
-Käyttämällä sovellusta hyväksyt nämä käyttöehdot.
+Hyväksymällä käyttöehdot hyväksyt nämä käyttöehdot.
