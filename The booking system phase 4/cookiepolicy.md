@@ -1,4 +1,4 @@
-# 🍪 Evästekäytännöt – CentriaCyber
+# Evästekäytännöt – CentriaCyber
 
 **Päivitetty:** 5.4.2025
 
