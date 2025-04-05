@@ -23,5 +23,6 @@ Cybersecurity and data privacy - Spring 2025
 | 20.3.2025 | 2 | Lecture | Lecture recording | 
 | 23.3.2025 | 3 | The Booking system project part 3 | Testing new sites. ZAP, wfuzz and manually | 
 | 2.4.2025 | 2 | GDPR | Learning about GRPR | 
+| 5.4.2025 | 3 | The Booking systemm project part 4 and GDPR | Going through the application to report fails. Terms of service, cookie policy, privacy policy | 
 
-Total hours: 53
+Total hours: 56
