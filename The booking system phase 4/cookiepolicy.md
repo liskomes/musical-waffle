@@ -2,7 +2,7 @@
 
 **Päivitetty:** 5.4.2025
 
-Sovellus **CentriaCyber** käyttää evästeitä ainoastaan istunnonhallinnan mahdollistamiseksi.
+Verkkosivusto **CentriaCyber** käyttää evästeitä ainoastaan istunnonhallinnan mahdollistamiseksi.
 
 ## Mitä evästeet ovat?
 
@@ -23,7 +23,7 @@ Evästeet ovat **istuntokohtaisia** ja poistuvat automaattisesti, kun suljet sel
 
 ## Evästeiden hallinta
 
-Koska evästeet ovat välttämättömiä sovelluksen toiminnalle, niitä ei voi poistaa käytöstä CentriaCyberin asetuksista. Voit kuitenkin hallita tai poistaa evästeitä selaimesi asetuksista.
+Koska evästeet ovat välttämättömiä ohjelmiston toiminnalle, niitä ei voi poistaa käytöstä CentriaCyberin asetuksista. Voit kuitenkin hallita tai poistaa evästeitä selaimesi asetuksista.
 
 ---
 
