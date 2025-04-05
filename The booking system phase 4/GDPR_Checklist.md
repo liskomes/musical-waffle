@@ -51,8 +51,8 @@
 
 | **Result** | **Data anonymization and pseudonymization** |
 | :----: | :--- |
-| ❌ | Is personal data anonymized where possible? |
-| ❌ | Are pseudonymization techniques used to protect data while maintaining its utility? |
+| ❌ *Note 9 | Is personal data anonymized where possible? |
+| ❌ *Note 9 | Are pseudonymization techniques used to protect data while maintaining its utility? |
 
 ---
 
@@ -66,7 +66,7 @@
 
 | **Result** | **Documentation and communication** |
 | :----: | :--- |
-| ⚠️ *Note 9 | Is there a privacy policy available to users during registration and easily accessible? |
+| ⚠️ *Note 10 | Is there a privacy policy available to users during registration and easily accessible? |
 | ❌ | Are administrators and developers provided with documented data protection practices <br>and processing activities? |
 | ❌ | Is there a documented data breach response process (e.g., how to notify authorities <br>and users of a breach)? |
 
@@ -93,4 +93,6 @@ Note 7: Its possible to inject SQL syntax to database
 
 Note 8: Data is located to personal pc in the development phase
 
-Note 9: There is a easily accessible privacy policy, but privacy policy contains nothing
+Note 9: Emails are in plain text format in the database
+
+Note 10: There is a easily accessible privacy policy, but privacy policy contains nothing
