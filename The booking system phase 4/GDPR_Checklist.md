@@ -10,17 +10,17 @@
 
 | **Result** | **User registration and management** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Does the registration form (page) include GDPR-compliant consent for processing<br> personal data (e.g., acceptance of the privacy policy)?|
-| &nbsp;✅/❌/⚠️&nbsp; | Can users view, edit, and delete their own personal data via their account? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is there a mechanism for the administrator to delete a reserver in<br> accordance with the "right to be forgotten"? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is underage registration (under 15 years) and booking functionality restricted? |
+| ⚠️ *Note 2 | Does the registration form (page) include GDPR-compliant consent for processing<br> personal data (e.g., acceptance of the privacy policy)?|
+| ❌ *Note 3 | Can users view, edit, and delete their own personal data via their account? |
+| ❌ | Is there a mechanism for the administrator to delete a reserver in<br> accordance with the "right to be forgotten"? |
+| ✅| Is underage registration (under 15 years) and booking functionality restricted? |
 
 ---
 
 | **Result** | **Booking visibility** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Are bookings visible to non-logged-in users only at the resource level<br> (without any personal data)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is it ensured that names, emails, or other personal data of bookers are not exposed<br> publicly or to unauthorized users? |
+| ✅ | Are bookings visible to non-logged-in users only at the resource level<br> (without any personal data)? |
+| ✅ | Is it ensured that names, emails, or other personal data of bookers are not exposed<br> publicly or to unauthorized users? |
 
 --- 
 
@@ -76,3 +76,7 @@
 ✅ Pass (a note can be added)  
 ❌ Fail (a note can be added)  
 ⚠️ Attention (a note can be added)
+
+Note 1: Users under age 15 cannot register
+Note 2: The terms of service is included to the form, but its there is no actual privacy policy yet
+Note 3: Users can only view their profile via account
