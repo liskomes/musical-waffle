@@ -26,49 +26,49 @@
 
 | **Result** | **Access control and authorization** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Have you ensured that only administrators can add, modify, and delete<br> resources and bookings? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is the system using role-based access control (e.g., reserver vs. administrator)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are administrator privileges limited to ensure GDPR compliance (e.g., administrators<br> cannot use data for unauthorized purposes)? |
+| ❌ | Have you ensured that only administrators can add, modify, and delete<br> resources and bookings? |
+| ❌ *Note 4| Is the system using role-based access control (e.g., reserver vs. administrator)? |
+| ⚠️ *Note 5 | Are administrator privileges limited to ensure GDPR compliance (e.g., administrators<br> cannot use data for unauthorized purposes)? |
 
 ---
 
 | **Result** | **Privacy by Design Principles** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Has Privacy by Default been implemented (e.g., collecting the minimum data by default)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are logs implemented without unnecessarily storing personal data? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are forms and system components designed with data protection in mind<br> (e.g., secured login, minimal fields)? |
+| ✅ | Has Privacy by Default been implemented (e.g., collecting the minimum data by default)? |
+| ⚠️ *Note 6 | Are logs implemented without unnecessarily storing personal data? |
+| ✅ | Are forms and system components designed with data protection in mind<br> (e.g., secured login, minimal fields)? |
 
 ---
 
 | **Result** | **Data security** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Are CSRF, XSS, and SQL injection protections implemented? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are passwords securely hashed using a strong algorithm (e.g., bcrypt, Argon2)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are data backup and recovery processes GDPR-compliant? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is personal data stored in data centers located within the EU? |
+| ❌ *Note 7 | Are CSRF, XSS, and SQL injection protections implemented? |
+| ✅ | Are passwords securely hashed using a strong algorithm (e.g., bcrypt, Argon2)? |
+| ❌ | Are data backup and recovery processes GDPR-compliant? |
+| ⚠️ *Note 8 | Is personal data stored in data centers located within the EU? |
 
 ---
 
 | **Result** | **Data anonymization and pseudonymization** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Is personal data anonymized where possible? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are pseudonymization techniques used to protect data while maintaining its utility? |
+| ❌ | Is personal data anonymized where possible? |
+| ❌ | Are pseudonymization techniques used to protect data while maintaining its utility? |
 
 ---
 
 | **Result** | **Data subject rights** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Can users download or request all personal data related to them (data access request)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is there an interface or process for users to request the deletion of their personal data? |
-| &nbsp;✅/❌/⚠️&nbsp; | Can users withdraw their consent for data processing? |
+| ❌ | Can users download or request all personal data related to them (data access request)? |
+| ❌ | Is there an interface or process for users to request the deletion of their personal data? |
+| ❌ | Can users withdraw their consent for data processing? |
 
 ---
 
 | **Result** | **Documentation and communication** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Is there a privacy policy available to users during registration and easily accessible? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are administrators and developers provided with documented data protection practices <br>and processing activities? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is there a documented data breach response process (e.g., how to notify authorities <br>and users of a breach)? |
+| ⚠️ *Note 9 | Is there a privacy policy available to users during registration and easily accessible? |
+| ❌ | Are administrators and developers provided with documented data protection practices <br>and processing activities? |
+| ❌ | Is there a documented data breach response process (e.g., how to notify authorities <br>and users of a breach)? |
 
 ---
 
@@ -80,3 +80,9 @@
 Note 1: Users under age 15 cannot register
 Note 2: The terms of service is included to the form, but its there is no actual privacy policy yet
 Note 3: Users can only view their profile via account
+Note 4: Roles work in exact same way. The code doesn't make difference between roles
+Note 5: +Note4. Administrator has no special rights implemented
+Note 6: Logs are not implemented
+Note 7: Its possible to inject SQL syntax to database
+Note 8: Data is located to personal pc in the development phase
+Note 9: There is a easily accessible privacy policy, but privacy policy contains nothing
