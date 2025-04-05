@@ -1,6 +1,6 @@
 # Evästekäytännöt – CentriaCyber
 
-**Päivitetty:** 5.4.2025
+Viimeksi päivitetty: 5.4.2025
 
 Verkkosivusto **CentriaCyber** käyttää evästeitä ainoastaan istunnonhallinnan mahdollistamiseksi.
 
