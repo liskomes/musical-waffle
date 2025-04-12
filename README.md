@@ -25,7 +25,8 @@ Cybersecurity and data privacy - Spring 2025
 | 2.4.2025 | 2 | GDPR | Learning about GRPR | 
 | 5.4.2025 | 3 | The Booking systemm project part 4 and GDPR | Going through the application to report fails. Terms of service, cookie policy, privacy policy | 
 | 10.4.2025 | 2 | Lecture | Going through quickly the course material and the final exercises | 
-| 12.4.2025 | 2 | Youtube video | Learning about NotPetya ramsomware and how it spead and worked in Ukraine | 
+| 11.4.2025 | 2 | Youtube videos | Learning about NotPetya ramsomware and how it spead and worked especially in Ukraine | 
+| 12.4.2025 | 2 | The final assignment | Writing reflections | 
 | 10.1.2025-10.2.2025* | 13* | Spring boot server project | Creating a server, learning (JWT-token, oAuth, SQL injections etc.) and implementing cyber security things to the server (Total hours of the project was about 20-40 hours, but there were a lot of things that wasn't so much related to cyber security and the project remained a bit raw state) | 
 
-Total hours: 73
+Total hours: 75
